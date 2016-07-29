@@ -1,6 +1,12 @@
 # torch-warp
 
-This repository contains a torch implementation for applying optical flow deformations to pairs of images in order to morph between images. The optical flow calculation and loading code is from [`manuelruder/artistic-videos`](https://github.com/manuelruder/artistic-videos), and is based on [DeepFlow](http://lear.inrialpes.fr/src/deepflow/). Theoretically, you could drop in another optical flow program which outputs `.flo` files in the [Middlebury format](http://vision.middlebury.edu/flow/data/).
+This repository contains a torch implementation for automatically applying optical flow deformations to pairs of images in order to morph between images. The optical flow calculation and loading code is from [`manuelruder/artistic-videos`](https://github.com/manuelruder/artistic-videos), and is based on [DeepFlow](http://lear.inrialpes.fr/src/deepflow/). Theoretically, you could drop in another optical flow program which outputs `.flo` files in the [Middlebury format](http://vision.middlebury.edu/flow/data/).
+
+This process is inspired by Patrick Feaster's post on [Annotating Historical Photographs With Image Morphing](https://griffonagedotcom.wordpress.com/2014/08/18/animating-historical-photographs-with-image-morphing/).
+
+## Examples
+
+![New York Skyline](http://i.imgur.com/oRcYrWf.gif) ![Historical Photo](http://i.imgur.com/z1N5tL5.gif) ![Cat and Child](http://i.imgur.com/0ugTCvk.gif)
 
 ## Dependencies
 
