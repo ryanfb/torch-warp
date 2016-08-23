@@ -27,6 +27,11 @@ if matching_captures && matching_captures.length > 0
   highres_url = matching_captures[0]['highResLink']
   lowres_url = stereo_metadata['url']
 
+  if highres_url.nil? || highres_url.empty?
+    puts image_captures.to_json
+    abort("No highResLink for #{digital_id}")
+  end
+
   # download images
   $stderr.puts "Downloading images..."
   `wget -nc -O #{ARGV[0]}.jpg '#{lowres_url}'`
