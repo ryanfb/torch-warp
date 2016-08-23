@@ -54,7 +54,6 @@ template = cv2.imread(args["template"])
 template = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
 template = cv2.Canny(template, 50, 200)
 (tH, tW) = template.shape[:2]
-cv2.imshow("Template", template)
 
 imagePath = args["image"]
 # load the image, convert it to grayscale, and initialize the
@@ -86,8 +85,6 @@ for scale in np.linspace(0.2, 1.0, 20)[::-1]:
     clone = np.dstack([edged, edged, edged])
     cv2.rectangle(clone, (maxLoc[0], maxLoc[1]),
       (maxLoc[0] + tW, maxLoc[1] + tH), (0, 0, 255), 2)
-    cv2.imshow("Visualize", clone)
-    cv2.waitKey(0)
 
   # if we have found a new maximum correlation value, then ipdate
   # the bookkeeping variable
