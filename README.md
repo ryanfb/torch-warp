@@ -4,6 +4,8 @@ This repository contains a torch implementation for automatically applying optic
 
 This process is inspired by Patrick Feaster's post on [Animating Historical Photographs With Image Morphing](https://griffonagedotcom.wordpress.com/2014/08/18/animating-historical-photographs-with-image-morphing/).
 
+My blog post about this process: [Animating Stereograms with Optical Flow Morphing](http://ryanfb.github.io/etc/2016/08/17/animating_stereograms_with_optical_flow_morphing.html)
+
 ## Examples
 
 ![New York Skyline](http://i.imgur.com/oRcYrWf.gif) ![Historical Photo](http://i.imgur.com/z1N5tL5.gif) ![Cat and Child](http://i.imgur.com/0ugTCvk.gif)
