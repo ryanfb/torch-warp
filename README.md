@@ -30,3 +30,5 @@ I had very little luck getting DeepFlow to work on OS X, so I'm using Docker to 
 * Build the Docker image with `docker build -t torch-warp .`
 * Run the build with `docker run -t -i torch-warp /bin/bash`. You may want to [map a host directory as a data volume](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-host-directory-as-a-data-volume) as well, in order to transfer images back and forth.
 * Use the scripts as described above inside the Docker container's shell.
+
+I've also made this repository an automated build on Docker Hub: [`ryanfb/torch-warp`](https://hub.docker.com/r/ryanfb/torch-warp/)
