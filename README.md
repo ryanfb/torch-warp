@@ -19,7 +19,7 @@ For input, you need two PNG images of the same dimensions named e.g. `filename_0
 
 You can also use `./run-stereogranimator.sh ID` with an image ID from [NYPL's Stereogranimator](http://stereo.nypl.org/) to download an animated GIF at low resolution and run it through the morphing process.
 
-If you sign up for [the NYPL Digital Collections API](http://api.repo.nypl.org/), you can use your API token to download high-resolution original images. The `nypl_recrop.rb` script reads the token from the `NYPL_API_TOKEN` environment variable, and takes a Stereogranimator image ID as an argument, downloading the original TIFF image and using `template_matching_multiscale.rb` to calculate the crop and split the image into two views at full resolution. The `run-stereogranimator-hi-res.sh` script uses this process instead of `wget` with low-resolution GIFs. You can also pass the `NYPL_API_TOKEN` environment variable [in your `docker run` command](https://docs.docker.com/engine/reference/run/#/env-environment-variables).
+If you sign up for [the NYPL Digital Collections API](http://api.repo.nypl.org/), you can use your API token with the included scripts to work with high-resolution original images. The `nypl_recrop.rb` script takes a Stereogranimator image ID as an argument and reads the API token from the `NYPL_API_TOKEN` environment variable, and attempts to apply the Stereogranimator's crop values to the original image. The `run-stereogranimator-hi-res.sh` script uses this process and passes the high-resolution cropped images to `run-torchwarp.sh`. You can also pass the `NYPL_API_TOKEN` environment variable [in your `docker run` command](https://docs.docker.com/engine/reference/run/#/env-environment-variables).
 
 ## Docker Usage
 
