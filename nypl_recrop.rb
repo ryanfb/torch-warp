@@ -8,6 +8,10 @@ NYPL_API_TOKEN = ENV["NYPL_API_TOKEN"]
 NYPL_AUTH = "Token token=\"#{NYPL_API_TOKEN}\""
 NYPL_ENDPOINT = "http://api.repo.nypl.org/api/v1/items"
 
+if NYPL_API_TOKEN.nil?
+  abort("You must set an NYPL_API_TOKEN environment variable with your token from http://api.repo.nypl.org/")
+end
+
 stereo_metadata = JSON.parse(RestClient.get("http://stereo.nypl.org/view/#{ARGV[0]}.json"))
 
 unless stereo_metadata['external_id'] == 0
